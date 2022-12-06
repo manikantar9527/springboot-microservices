@@ -36,8 +36,7 @@ public class StudentServiceImpl implements StudentService {
 
 	@Override
 	public String addStudents(List<Student> students) {
-		StudentRepo.saveAll(Stream.of(new Student(101, "basant", "1", "B"), new Student(102, "Santosh", "2", "B"),
-				new Student(103, "Ajay", "11", "C")).collect(Collectors.toList()));
+		StudentRepo.saveAll(students);
 		return AppConstants.STUDENTS_ADDED;
 	}
 

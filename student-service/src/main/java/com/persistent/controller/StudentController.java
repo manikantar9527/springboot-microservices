@@ -1,6 +1,8 @@
 package com.persistent.controller;
 
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,6 +27,7 @@ public class StudentController {
 	private Logger logger = LoggerFactory.getLogger(StudentController.class);
 	@Autowired
 	private CourseClient courseClient;
+	
 
 	@GetMapping("/students/courses")
 	public ResponseEntity<StudentAndCourseResponse> getStudentsWithCourses() {
