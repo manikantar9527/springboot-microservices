@@ -28,9 +28,9 @@ public class StudentController {
 
 	@GetMapping("/students/courses")
 	public ResponseEntity<StudentAndCourseResponse> getStudentsWithCourses() {
-		logger.info("Received Welcome API");
+		logger.info("Request received");
 		List<Course> courses = courseClient.invokeCourseApi();
-		logger.info("Received Welcome API");
+		logger.info("Request completed");
 		return ResponseEntity.ok(new StudentAndCourseResponse(getStudents().getBody(), courses));
 	}
 
